@@ -17,6 +17,22 @@ namespace Asteroids
         private float _nextSpawnTime;
         private Camera _camera;
 
+        public void SplitAsteroid(SplitData splitData)
+        {
+            var rand = Random.Range(2, 4);
+            for (int i = 0; i < rand; i++)
+            {
+                var randX = Random.Range(-0.4f, 0.4f);
+                var randY = Random.Range(-0.4f, 0.4f);
+                var position = splitData.SpawnPos + new Vector3(randX, randY, 0f);
+                var spawned = Instantiate(_asteroidPrefab, position, Quaternion.identity);
+                spawned.SetSize(splitData.Size);
+
+                if (!_asteroidSet) { continue; }
+                _asteroidSet.RegisterAsteroid(spawned);
+            }
+        }
+
         private enum SpawnLocation
         {
             Top,
