@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867257717}
   - component: {fileID: 1867257716}
+  - component: {fileID: 1867257718}
   m_Layer: 0
   m_Name: AsteroidSpawner
   m_TagString: Untagged
@@ -235,6 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1ae38084ec4c29aa5d36b28f72a324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _asteroidSet: {fileID: 11400000, guid: 7b667d7d64b86f14a9dfc4f5b24ebfde, type: 2}
   _asteroidPrefab: {fileID: 1784223117350305363, guid: 01106835b2bc0e347a3bb06b7544b51a, type: 3}
   _minSpawnTime: 1
   _maxSpawnTime: 4
@@ -254,6 +256,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1867257718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867257715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d32b0541e9c0c4695007694b3b468d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventNoPayload: {fileID: 0}
+  _responseNoPayload:
+    m_PersistentCalls:
+      m_Calls: []
+  _event: {fileID: 11400000, guid: 56a185c1f1a606e439cfd126202aad5c, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2970632032457142644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -440,3 +462,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c71243f12cdfc2a4282f1805a6098327, type: 3}
+--- !u!1001 &9119935555102658561
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623043776188396022, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383811286844496932, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: m_Name
+      value: AsteroidDestroyer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
