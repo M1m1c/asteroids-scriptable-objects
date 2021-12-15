@@ -6,12 +6,13 @@ namespace Asteroids
 {
     public class AsteroidSpawner : MonoBehaviour
     {
+        [SerializeField] private AsteroidSet _asteroidSet;
         [SerializeField] private Asteroid _asteroidPrefab;
         [SerializeField] private float _minSpawnTime;
         [SerializeField] private float _maxSpawnTime;
         [SerializeField] private int _minAmount;
         [SerializeField] private int _maxAmount;
-        
+
         private float _timer;
         private float _nextSpawnTime;
         private Camera _camera;
@@ -61,12 +62,15 @@ namespace Asteroids
         private void Spawn()
         {
             var amount = Random.Range(_minAmount, _maxAmount + 1);
-            
+
             for (var i = 0; i < amount; i++)
             {
                 var location = GetSpawnLocation();
                 var position = GetStartPosition(location);
-                Instantiate(_asteroidPrefab, position, Quaternion.identity);
+                var spawned = Instantiate(_asteroidPrefab, position, Quaternion.identity);
+
+                if (!_asteroidSet) { continue; }
+                _asteroidSet.RegisterAsteroid(spawned);
             }
         }
 
@@ -86,7 +90,7 @@ namespace Asteroids
         private Vector3 GetStartPosition(SpawnLocation spawnLocation)
         {
             var pos = new Vector3 { z = Mathf.Abs(_camera.transform.position.z) };
-            
+
             const float padding = 5f;
             switch (spawnLocation)
             {
@@ -109,7 +113,7 @@ namespace Asteroids
                 default:
                     throw new ArgumentOutOfRangeException(nameof(spawnLocation), spawnLocation, null);
             }
-            
+
             return _camera.ScreenToWorldPoint(pos);
         }
     }
