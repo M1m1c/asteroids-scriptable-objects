@@ -275,7 +275,19 @@ MonoBehaviour:
   _event: {fileID: 11400000, guid: 56a185c1f1a606e439cfd126202aad5c, type: 2}
   _response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1867257716}
+        m_TargetAssemblyTypeName: Asteroids.AsteroidSpawner, Assembly-CSharp
+        m_MethodName: SplitAsteroid
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2970632032457142644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290,6 +302,10 @@ PrefabInstance:
     - target: {fileID: 2970632031999273636, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970632031999273636, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2970632031999273637, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
       propertyPath: m_RootOrder
