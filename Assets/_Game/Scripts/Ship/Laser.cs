@@ -24,5 +24,11 @@ namespace Ship
             var trans = transform;
             _rigidbody.MovePosition(trans.position + trans.up * _speed);
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Player")) { return; }
+            Destroy(gameObject);
+        }
     }
 }
