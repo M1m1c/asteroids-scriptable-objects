@@ -8,7 +8,7 @@ namespace Asteroids
     [RequireComponent(typeof(Rigidbody2D))]
     public class Asteroid : MonoBehaviour
     {
-        [SerializeField] private ScriptableEventInt _onAsteroidDestroyed;
+        [SerializeField] private ScriptableEventInt _onAsteroidHitByLaser;
         
         [Header("Config:")]
         [SerializeField] private float _minForce;
@@ -40,32 +40,32 @@ namespace Asteroids
         {
             if (string.Equals(other.tag, "Laser"))
             {
-               HitByLaser();
+                _onAsteroidHitByLaser.Raise(_instanceId);
             }
         }
 
-        private void HitByLaser()
-        {
-            _onAsteroidDestroyed.Raise(_instanceId);
-            Destroy(gameObject);
-        }
+        //private void HitByLaser()
+        //{
+        //    _onAsteroidDestroyed.Raise(_instanceId);
+        //    //Destroy(gameObject);
+        //}
 
         // TODO Can we move this to a single listener, something like an AsteroidDestroyer?
-        public void OnHitByLaser(IntReference asteroidId)
-        {
-            if (_instanceId == asteroidId.GetValue())
-            {
-                Destroy(gameObject);
-            }
-        }
+        //public void OnHitByLaser(IntReference asteroidId)
+        //{
+        //    if (_instanceId == asteroidId.GetValue())
+        //    {
+        //        Destroy(gameObject);
+        //    }
+        //}
         
-        public void OnHitByLaserInt(int asteroidId)
-        {
-            if (_instanceId == asteroidId)
-            {
-                Destroy(gameObject);
-            }
-        }
+        //public void OnHitByLaserInt(int asteroidId)
+        //{
+        //    if (_instanceId == asteroidId)
+        //    {
+        //        Destroy(gameObject);
+        //    }
+        //}
         
         private void SetDirection()
         {
@@ -100,6 +100,11 @@ namespace Asteroids
         {
             var size = Random.Range(_minSize, _maxSize);
             _shape.localScale = new Vector3(size, size, 0f);
+        }
+
+        public float GetSize()
+        {
+            return _shape.localScale.x;
         }
     }
 }
