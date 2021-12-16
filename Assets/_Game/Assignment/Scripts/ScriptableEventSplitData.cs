@@ -1,5 +1,4 @@
-﻿using Asteroids;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DefaultNamespace.ScriptableEvents
 {
