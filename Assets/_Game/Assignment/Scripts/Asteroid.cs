@@ -1,6 +1,5 @@
 using DefaultNamespace.ScriptableEvents;
 using UnityEngine;
-using Variables;
 using Random = UnityEngine.Random;
 
 namespace Asteroids
@@ -35,6 +34,7 @@ namespace Asteroids
             AddTorque();
         }
 
+        //Removed hit by laser functions, instead added raise call here if the asteroid is hit by a laser.
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (string.Equals(other.tag, "Laser"))
@@ -72,12 +72,13 @@ namespace Asteroids
             _rigidbody.AddTorque(torque, ForceMode2D.Impulse);
         }
 
+        //Made set size public and be called by spawner instead of this classes start
         public void SetSize()
         {
             var size = Random.Range(_minSize, _maxSize);
             _shape.localScale = new Vector3(size, size, 0f);
         }
-
+        //Added set size with specified size, also a get size
         public void SetSize(float size)
         {
             _shape.localScale = new Vector3(size, size, 0f);
