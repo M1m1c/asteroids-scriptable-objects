@@ -8,11 +8,13 @@ namespace Asteroids
         [SerializeField] private ScriptableEventSplitData _OnAsteroidSplit;
         [SerializeField] private AsteroidSet _asteroidSet;
         [SerializeField] private float _destructionThreshold = 0.4f;
-        public void OnAsteroidHitByLaser(int asteroidId)
+
+        //Destroys asteroid with ID, also splits it if it is larger that threshold
+        public void OnAsteroidHitByLaser(int asteroidID)
         {
             if (!_asteroidSet) { return; }
 
-            var hitAsteroid = _asteroidSet.GetAsteroid(asteroidId);
+            var hitAsteroid = _asteroidSet.GetAsteroid(asteroidID);
             if (!hitAsteroid) { return; }
 
             var size = hitAsteroid.GetSize();
