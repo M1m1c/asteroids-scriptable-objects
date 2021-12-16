@@ -1,7 +1,7 @@
 using DefaultNamespace.ScriptableEvents;
 using UnityEngine;
 
-public class PositionTracker : MonoBehaviour
+public class OutOfBoundsChecker : MonoBehaviour
 {
     [SerializeField] private ScriptableEventVector3 _onOutOfBounds;
 
