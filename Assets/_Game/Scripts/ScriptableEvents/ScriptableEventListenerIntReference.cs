@@ -27,4 +27,10 @@ namespace DefaultNamespace.ScriptableEvents
     {
 
     }
+
+    [Serializable]
+    public class UnityEventVector3 : UnityEvent<Vector3>
+    {
+
+    }
 }
