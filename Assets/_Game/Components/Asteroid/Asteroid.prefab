@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3169066251457290625}
-  - component: {fileID: 3119465934673122495}
+  - component: {fileID: 398779997960068150}
   - component: {fileID: 7434321719335165977}
   - component: {fileID: 6355803093840545148}
   m_Layer: 0
@@ -107,7 +107,7 @@ Transform:
   m_Father: {fileID: 1524412162417054026}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3119465934673122495
+--- !u!114 &398779997960068150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7041230333510869417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1494e5ca4ea41309c15087d2a3a3507, type: 3}
+  m_Script: {fileID: 11500000, guid: c3fac0e0191f90843beead28850fa87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _asteroidSet: {fileID: 11400000, guid: 7b667d7d64b86f14a9dfc4f5b24ebfde, type: 2}
