@@ -17,6 +17,8 @@ namespace Asteroids
         private float _nextSpawnTime;
         private Camera _camera;
 
+        //added this function, which is triggered via scriptable event listener
+        //Spawns 2 to 3 smaller asteroids offset from the position sent in split data.
         public void SplitAsteroid(SplitData splitData)
         {
             var rand = Random.Range(2, 4);
