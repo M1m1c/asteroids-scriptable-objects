@@ -7,7 +7,7 @@ namespace Asteroids
     {
         [SerializeField] private ScriptableEventSplitData _OnAsteroidSplit;
         [SerializeField] private AsteroidSet _asteroidSet;
-        [SerializeField] private float _destructionThreshold = 0.3f;
+        [SerializeField] private float _destructionThreshold = 0.4f;
         public void OnAsteroidHitByLaser(int asteroidId)
         {
             if (!_asteroidSet) { return; }

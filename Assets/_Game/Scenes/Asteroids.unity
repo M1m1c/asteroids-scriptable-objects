@@ -533,5 +533,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: AsteroidDestroyer
       objectReference: {fileID: 0}
+    - target: {fileID: 8087332596581894138, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
+      propertyPath: _destructionThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 947fa5e13d03dfe4c86f81acf2c07ae2, type: 3}
